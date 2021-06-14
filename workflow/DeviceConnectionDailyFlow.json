@@ -1,0 +1,36 @@
+[
+    {
+        "stepName": "Import_DeviceConnectionSessionTmp_BQ",
+        "stepMethod": "import_bq",
+        "targetDatasetId": "tmp",
+        "targetTableId": "DeviceConnectionSessionTmp",
+        "sqlFile": "DeviceConnectionSession.sql",
+        "schemaOption": "--expiration 14400",
+        "sqlReplaceParam": [ "startDate=$(printf '%(%Y-%m-%d)T' $((EPOCHSECONDS-172800)))", "endDate=$(printf '%(%Y-%m-%d)T' $((EPOCHSECONDS-86400)))"]
+    },
+    {
+        "stepName": "Merge_DeviceConnectionSession_BQ",
+        "stepMethod": "exec_bq_sql",
+        "sqlFile": "DeviceConnectionSession_Merge_BQ.sql"
+    },
+    {
+        "stepName": "Import_DeviceConnectionDailySurvivalTmp_BQ",
+        "stepMethod": "import_bq",
+        "targetDatasetId": "tmp",
+        "targetTableId": "DeviceConnectionDailySurvivalTmp",
+        "sqlFile": "DeviceConnectionDailySurvival.sql",
+        "schemaOption": "--expiration 14400",
+        "sqlReplaceParam": [ "startDate=$(printf '%(%Y-%m-%d)T' $((EPOCHSECONDS-172800)))", "endDate=$(printf '%(%Y-%m-%d)T' $((EPOCHSECONDS-86400)))"]
+    },
+    {
+        "stepName": "Merge_DeviceConnectionDailySurvival_BQ",
+        "stepMethod": "exec_bq_sql",
+        "sqlFile": "DeviceConnectionDailySurvival_Merge_BQ.sql"
+    },
+    {
+        "stepName": "Trigger_DeviceConnectionWeeklyFlow",
+        "stepMethod": "trigger_flow",
+        "triggerCondition": [ "$(date +%u)=7" ],
+        "targetFlowName": "DeviceConnectionWeeklyFlow"
+    }
+]
