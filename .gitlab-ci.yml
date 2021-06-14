@@ -7,7 +7,7 @@ stages:
 build_image:
   stage: build
   script:
-    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $​CI_REGISTRY
     - BRANCH=$(echo $CI_BUILD_REF_NAME| cut -d'/' -f 2)
     - TAG_ID=${BRANCH}_$(echo $CI_BUILD_REF | cut -c 1-7)
     - docker build VERSION=$TAG_ID -t $CI_REGISTRY_IMAGE:$TAG_ID .
