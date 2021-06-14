@@ -6,8 +6,6 @@ stages:
 
 build_image:
   stage: build
-  before_script:
-    - docker info
   script:
     - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
     - BRANCH=$(echo $CI_BUILD_REF_NAME| cut -d'/' -f 2)
