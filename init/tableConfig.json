@@ -1,0 +1,32 @@
+[
+    {
+      "TABLE_NAME": "DeviceInfo",
+      "DATASET_ID": "raw",
+      "CLUSTER_FIELDS": "device_id",
+      "PARTITION_FIELDS": null
+    },
+    {
+        "TABLE_NAME": "DeviceConnectionRealtimeLog",
+        "DATASET_ID": "staging",
+        "CLUSTER_FIELDS": "timestamp,device_id,session_id",
+        "PARTITION_FIELDS": "timestamp"
+    },
+    {
+        "TABLE_NAME": "DeviceConnectionDailySurvival",
+        "DATASET_ID": "aggregating",
+        "CLUSTER_FIELDS": "date,country,platform",
+        "PARTITION_FIELDS": "date"
+    },
+    {
+        "TABLE_NAME": "DeviceConnectionSession",
+        "DATASET_ID": "aggregating",
+        "CLUSTER_FIELDS": null,
+        "PARTITION_FIELDS": "date"
+    },
+    {
+        "TABLE_NAME": "DeviceConnectionWeeklyMaxUptime",
+        "DATASET_ID": "aggregating",
+        "CLUSTER_FIELDS": "week_day,device_id",
+        "PARTITION_FIELDS": "week_day"
+    }
+]
