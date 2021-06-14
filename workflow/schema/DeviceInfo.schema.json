@@ -1,0 +1,38 @@
+[
+  {
+    "description": "使用者 ID",
+    "mode": "REQUIRED",
+    "name": "user_id",
+    "type": "INTEGER"
+  },
+  {
+    "description": "裝置 ID",
+    "mode": "REQUIRED",
+    "name": "device_id",
+    "type": "STRING"
+  },
+  {
+    "description": "裝置平台",
+    "mode": "NULLABLE",
+    "name": "platform",
+    "type": "STRING"
+  },
+  {
+    "description": "國家",
+    "mode": "NULLABLE",
+    "name": "country",
+    "type": "STRING"
+  },
+  {
+    "description": "資料更新者",
+    "mode": "REQUIRED",
+    "name": "updated_user",
+    "type": "STRING"
+  },
+  {
+    "description": "資料更新時間",
+    "mode": "NULLABLE",
+    "name": "updated_datetime",
+    "type": "TIMESTAMP"
+  }
+]

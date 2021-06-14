@@ -1,0 +1,44 @@
+[
+  {
+    "description": "日期",
+    "mode": "REQUIRED",
+    "name": "week_day",
+    "type": "DATE"
+  },
+  {
+    "description": "裝置 ID",
+    "mode": "REQUIRED",
+    "name": "device_id",
+    "type": "STRING"
+  },
+  {
+    "description": "最長連線時間（日）",
+    "mode": "REQUIRED",
+    "name": "max_uptime_in_day",
+    "type": "INTEGER"
+  },
+  {
+    "description": "連線開始時間",
+    "mode": "REQUIRED",
+    "name": "max_uptime_start_time",
+    "type": "TIMESTAMP"
+  },
+  {
+    "description": "連線結束時間",
+    "mode": "REQUIRED",
+    "name": "max_uptime_end_time",
+    "type": "TIMESTAMP"
+  },
+  {
+    "description": "資料更新者",
+    "mode": "REQUIRED",
+    "name": "updated_user",
+    "type": "STRING"
+  },
+  {
+    "description": "資料更新時間",
+    "mode": "REQUIRED",
+    "name": "updated_datetime",
+    "type": "TIMESTAMP"
+  }
+]

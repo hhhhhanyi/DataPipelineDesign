@@ -1,0 +1,74 @@
+[
+  {
+    "description": "日期",
+    "mode": "REQUIRED",
+    "name": "date",
+    "type": "DATE"
+  },
+  {
+    "description": "國家",
+    "mode": "REQUIRED",
+    "name": "country",
+    "type": "STRING"
+  },
+  {
+    "description": "裝置平台",
+    "mode": "REQUIRED",
+    "name": "platform",
+    "type": "STRING"
+  },
+  {
+    "description": "使用者數",
+    "mode": "REQUIRED",
+    "name": "user",
+    "type": "INTEGER"
+  },
+  {
+    "description": "session 數",
+    "mode": "REQUIRED",
+    "name": "session",
+    "type": "INTEGER"
+  },
+  {
+    "description": "裝置數",
+    "mode": "REQUIRED",
+    "name": "device",
+    "type": "INTEGER"
+  },
+  {
+    "description": "連線 1 小時（含）比例",
+    "mode": "REQUIRED",
+    "name": "survival_1_hr",
+    "type": "FLOAT64"
+  },
+  {
+    "description": "連線 6 小時（含）比例",
+    "mode": "REQUIRED",
+    "name": "survival_6_hr",
+    "type": "FLOAT64"
+  },
+  {
+    "description": "連線 12 小時（含）比例",
+    "mode": "REQUIRED",
+    "name": "survival_12_hr",
+    "type": "FLOAT64"
+  },
+  {
+    "description": "連線 24 小時比例",
+    "mode": "REQUIRED",
+    "name": "survival_24_hr",
+    "type": "FLOAT64"
+  },
+  {
+    "description": "資料更新者",
+    "mode": "REQUIRED",
+    "name": "updated_user",
+    "type": "STRING"
+  },
+  {
+    "description": "資料更新時間",
+    "mode": "REQUIRED",
+    "name": "updated_datetime",
+    "type": "TIMESTAMP"
+  }
+]

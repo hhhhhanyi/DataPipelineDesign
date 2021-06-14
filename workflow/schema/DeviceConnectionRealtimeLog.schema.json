@@ -1,0 +1,38 @@
+[
+  {
+    "description": "裝置 ID",
+    "mode": "REQUIRED",
+    "name": "device_id",
+    "type": "STRING"
+  },
+  {
+    "description": "Session ID",
+    "mode": "REQUIRED",
+    "name": "session_id",
+    "type": "INTEGER"
+  },
+  {
+    "description": "裝置狀態",
+    "mode": "REQUIRED",
+    "name": "state",
+    "type": "STRING"
+  },
+  {
+    "description": "裝置狀態檢查時間",
+    "mode": "REQUIRED",
+    "name": "timestamp",
+    "type": "TIMESTAMP"
+  },
+  {
+    "description": "資料更新者",
+    "mode": "REQUIRED",
+    "name": "updated_user",
+    "type": "STRING"
+  },
+  {
+    "description": "資料更新時間",
+    "mode": "REQUIRED",
+    "name": "updated_datetime",
+    "type": "TIMESTAMP"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "description": "裝置 ID",
+    "mode": "REQUIRED",
+    "name": "device_id",
+    "type": "STRING"
+  },
+  {
+    "description": "日期",
+    "mode": "REQUIRED",
+    "name": "date",
+    "type": "DATE"
+  },
+  {
+    "description": "最長連線時間（分）",
+    "mode": "NULLABLE",
+    "name": "max_uptime_in_min",
+    "type": "INTEGER"
+  },
+  {
+    "description": "連線開始時間",
+    "mode": "NULLABLE",
+    "name": "start_time",
+    "type": "TIMESTAMP"
+  },
+  {
+    "description": "連線結束時間",
+    "mode": "NULLABLE",
+    "name": "end_time",
+    "type": "TIMESTAMP"
+  },
+  {
+    "description": "Session ID",
+    "mode": "NULLABLE",
+    "name": "session_id",
+    "type": "INTEGER"
+  },
+  {
+    "description": "使用者 ID",
+    "mode": "REQUIRED",
+    "name": "user_id",
+    "type": "INTEGER"
+  },
+  {
+    "description": "裝置平台",
+    "mode": "REQUIRED",
+    "name": "platform",
+    "type": "STRING"
+  },
+  {
+    "description": "國家",
+    "mode": "REQUIRED",
+    "name": "country",
+    "type": "STRING"
+  },
+  {
+    "description": "是否 timeout",
+    "mode": "REQUIRED",
+    "name": "ever_timeout",
+    "type": "BOOLEAN"
+  },
+  {
+    "description": "資料更新者",
+    "mode": "REQUIRED",
+    "name": "updated_user",
+    "type": "STRING"
+  },
+  {
+    "description": "資料更新時間",
+    "mode": "REQUIRED",
+    "name": "updated_datetime",
+    "type": "TIMESTAMP"
+  }
+]

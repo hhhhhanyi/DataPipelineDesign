@@ -1,0 +1,32 @@
+[
+  {
+    "description": "裝置 ID",
+    "mode": "REQUIRED",
+    "name": "device_id",
+    "type": "STRING"
+  },
+  {
+    "description": "裝置狀態",
+    "mode": "REQUIRED",
+    "name": "state",
+    "type": "STRING"
+  },
+  {
+    "description": "裝置狀態檢查時間",
+    "mode": "NULLABLE",
+    "name": "timestamp",
+    "type": "INTEGER"
+  },
+  {
+    "description": "資料更新者",
+    "mode": "REQUIRED",
+    "name": "updated_user",
+    "type": "STRING"
+  },
+  {
+    "description": "資料更新時間",
+    "mode": "NULLABLE",
+    "name": "updated_datetime",
+    "type": "TIMESTAMP"
+  }
+]
