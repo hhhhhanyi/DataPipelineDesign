@@ -8,6 +8,7 @@ set +e
 PROJECT_ID=${PROJECT_ID:="alfred-recruitment-test"}
 
 if [[ -z "$FLOW_NAME" ]]; then
+    echo "Need FLOW_NAME paramter!"
     return 0
 fi
 
