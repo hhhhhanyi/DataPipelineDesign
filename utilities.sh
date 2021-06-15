@@ -6,7 +6,7 @@ gcloudAuth() {
         return 0
     fi
 
-    gcloud auth activate-service-account --key-file=secret/application_credentials.json
+    gcloud auth activate-service-account --key-file=secret/gcloud-credential.json
     # checkError "gcloud Auth" "$@"
     gcloud config set project "$PROJECT_ID"
     GAUTH=1
