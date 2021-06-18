@@ -118,6 +118,10 @@
 - BigQuery
 - bash
 
+## 待優化
+- Raw Data -> Layer0 或許可以用 GCP Dataflow 串流來算 session
+- 上傳備份檔案到 GCS
+
 ## Contact
 **Han-Yi Lin**<br>
 E-mail: hhhhhanyi@gmail.com
