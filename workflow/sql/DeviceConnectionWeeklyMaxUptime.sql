@@ -7,6 +7,6 @@ SELECT
   'DATA_PIPELINE' AS updated_user,
   CURRENT_TIMESTAMP() AS updated_datetime
 FROM `alfred-recruitment-test.aggregating.DeviceConnectionSession`
-WHERE session_id IS NOT NULL
+WHERE session_id IS NOT NULL AND date >= '{{startDate}}' AND date <= '{{endDate}}'
 GROUP BY week_day, device_id
 ORDER BY week_day, device_id
