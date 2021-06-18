@@ -38,7 +38,7 @@
 | timestamp | TIMESTAMP | 裝置狀態檢查時間 | 
 
 ### DeviceConnectionRealtimeLog
-- CLUSTER_FIELDS: timestamp,device_id,session_id"
+- CLUSTER_FIELDS: timestamp, device_id, session_id
 - PARTITION_FIELDS: timestamp
 
 | name | type | discribtion | 
