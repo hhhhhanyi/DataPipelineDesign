@@ -23,7 +23,7 @@
 <img src="https://i.imgur.com/kAqUZ23.png" width="400"/>
 
 ### DeviceConnectionReportFlow
-- Schedule: Everyday
+- Schedule: Everyday 01:00 am
 
 <img src="https://i.imgur.com/FcRtrje.png" width="900"/>
 
