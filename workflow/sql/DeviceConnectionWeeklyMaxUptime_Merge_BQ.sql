@@ -1,6 +1,6 @@
 MERGE `alfred-recruitment-test.aggregating.DeviceConnectionWeeklyMaxUptime` T
 USING `alfred-recruitment-test.tmp.DeviceConnectionWeeklyMaxUptimeTmp` S
-ON  S.week_day = T.week_day AND S.device_id = T.device_id
+ON  T.week_day = S.week_day AND T.device_id = S.device_id
 WHEN NOT MATCHED THEN
   INSERT (week_day, device_id, max_uptime_in_day, max_uptime_start_time, max_uptime_end_time, updated_user, updated_datetime) 
   VALUES (week_day, device_id, max_uptime_in_day, max_uptime_start_time, max_uptime_end_time, updated_user, updated_datetime)

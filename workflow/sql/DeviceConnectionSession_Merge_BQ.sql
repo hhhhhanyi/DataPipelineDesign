@@ -1,6 +1,6 @@
 MERGE `alfred-recruitment-test.aggregating.DeviceConnectionSession` T
 USING `alfred-recruitment-test.tmp.DeviceConnectionSessionTmp` S
-ON S.date = T.date AND S.device_id = T.device_id
+ON T.date = S.date AND T.device_id = S.device_id
 WHEN NOT MATCHED THEN
   INSERT (device_id, date, max_uptime_in_min, start_time, end_time, session_id, user_id, platform, country, ever_timeout, updated_user, updated_datetime) 
   VALUES (device_id, date, max_uptime_in_min, start_time, end_time, session_id, user_id, platform, country, ever_timeout, updated_user, updated_datetime)

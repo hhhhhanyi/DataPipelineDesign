@@ -1,6 +1,6 @@
 MERGE `alfred-recruitment-test.aggregating.DeviceConnectionDailySurvival` T
 USING `alfred-recruitment-test.tmp.DeviceConnectionDailySurvivalTmp` S
-ON S.date = T.date AND S.country = T.country AND S.platform = T.platform
+ON T.date = S.date AND T.country = S.country AND T.platform = S.platform
 WHEN NOT MATCHED THEN
   INSERT (date, country, platform, user, session, device, survival_1_hr, survival_6_hr, survival_12_hr, survival_24_hr, updated_user, updated_datetime) 
   VALUES (date, country, platform, user, session, device, survival_1_hr, survival_6_hr, survival_12_hr, survival_24_hr, updated_user, updated_datetime)
