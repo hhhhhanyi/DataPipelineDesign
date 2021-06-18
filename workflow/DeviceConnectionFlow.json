@@ -1,0 +1,15 @@
+[
+    {
+        "stepName": "Import_DeviceConnectionRealtimeLog",
+        "stepMethod": "import_bq",
+        "targetDatasetId": "tmp",
+        "targetTableId": "DeviceConnectionRealtimeLogTmp",
+        "sqlFile": "DeviceConnectionRealtimeLog.sql",
+        "schemaOption": "--expiration 14400"
+    },
+    {
+        "stepName": "Merge_DeviceConnectionRealtimeLog_BQ",
+        "stepMethod": "exec_bq_sql",
+        "sqlFile": "DeviceConnectionRealtimeLog_Merge_BQ.sql"
+    }
+]
